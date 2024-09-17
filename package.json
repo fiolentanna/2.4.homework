@@ -1,0 +1,22 @@
+{
+  "name": "2.4.homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "array.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fiolentanna/2.4.homework.git"
+  },
+  "author": "fiolentanna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fiolentanna/2.4.homework/issues"
+  },
+  "homepage": "https://github.com/fiolentanna/2.4.homework#readme",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
