@@ -16,6 +16,23 @@ let expencesExamples = [
   },
 ];
 
+
+//создадим функцию для обозначения названия месяцев,  в которых затраты меньше либо равны 1000
+function getMonthsBelowLimit(arr) {
+  let arrMonthbelowLimit = []; //массив с индексами месяцев, в которых затраты <= 1000
+
+  arr.forEach((value, index) => {
+    if (value <= 1000) {
+      let month = new Date(2024, index).toLocaleString("en-US", {
+        month: "long",
+      });
+      arrMonthbelowLimit.push(month);
+    }
+  });
+  return arrMonthbelowLimit;
+}
+
+
 // создадим переменную с результатами сумм для массивов
 let expectedResult = [40590, 148200, 25709]
 
@@ -46,3 +63,19 @@ function testCalculateExpences(expectedResult,expencesArray) {
 expencesExamples.forEach((expencesEx, index) => {
   testCalculateExpences(expectedResult[index], expencesEx.yearlyExpences)
 })
+
+//функция для вывода названия месяцев, где затраты менее или равны 1000
+function printMonthsBelowLimit() {
+  expencesExamples.forEach((value, index) => {
+    console.log(
+      `Test ${
+        index + 1
+      }: Месяц, где затраты менее или равны 1000 ${getMonthsBelowLimit(
+        value.yearlyExpences
+      )}`
+    );
+  });
+}
+
+//вызов функции для вывода названия месяцев, где затраты менее или равны 1000
+printMonthsBelowLimit();
