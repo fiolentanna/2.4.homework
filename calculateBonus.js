@@ -7,4 +7,4 @@ const calculateBonus = (a, b) => {
     return bonus;
     };
 
-calculateBonus(10,7); // вызов функции, чтобы запустит выполнение 
+    module.exports = calculateBonus;
